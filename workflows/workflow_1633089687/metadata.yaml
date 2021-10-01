@@ -1,0 +1,18 @@
+location: workflows/workflow_1633089687
+workflow: news_classification_slack.yml
+reamdme: gnews_classification_slack.md
+summary: Search news article via Google news, then classify them and send result on Slack
+detail: |
+  GoogleNews Observer search and fetch google news article with given query
+  Then TextSplitter split article in small chunks so Classification Analyzer can process it easily
+  Then Classification Analyzer classify chunks in given labels using HuggingFace zero shot models
+  Then Inference Aggregator aggregate classification output for each chunks and compute final inference based on given aggregation function
+  And finally Slack Informer send result to given slack channel using API
+tags:
+  - observer: google news
+  - analyzer: clasification
+  - analyzer: zero-shot classification
+  - analyzer: transformers
+  - pre-processor: text splitter
+  - post-processor: inference aggregator
+  - informer: slack
