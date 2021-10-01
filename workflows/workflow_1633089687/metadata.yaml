@@ -1,6 +1,6 @@
 location: workflows/workflow_1633089687
 workflow: news_classification_slack.yml
-reamdme: gnews_classification_slack.md
+reamdme: news_classification_slack.md
 summary: Search news article via Google news, then classify them and send result on Slack
 detail: |
   GoogleNews Observer search and fetch google news article with given query
